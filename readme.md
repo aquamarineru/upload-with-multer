@@ -91,15 +91,15 @@ See the [Multer](https://www.npmjs.com/package/multer) documentation.
 
 ### 📌 Level 1:
 
-- Copy-paste the above html boilerplate into an index.html file
-- Set up your Node/Express server like we’ve previously seen
-- Create a POST route handler for /upload-profile-pic
-- Try to set up Multer on your server following the documentation. You’ll have to set a destination storage, and the way you want the filenames to be handled ([help](https://medium.com/dataseries/configuring-express-multer-middleware-and-checking-file-information-497dc7af9eea), [help](https://www.npmjs.com/package/multer#diskstorage))
-- Pass the middleware to your **POST** route handler; see if you can _console.log(req.file)_ inside of it
-- If you can; you’re all set, you might want to implement some error handling logic here in case you don’t have a file
-- And then some logic when you do have a file. Look at the info you get. Check if the file is saved correctly, with the right extension name (tip: _Multer removes the filename extension by default_, so you need to add it back) ([help](https://nodejs.org/api/path.html#path_path_extname_path))
-- You’ll need to use another application level middleware for Express to handle serving static files to the client ([help](https://expressjs.com/en/starter/static-files.html))
-- You want to send the picture back to the client for immediate display. You can res.send(`‘<h2>Here is the picture:</h2><img src=”<the path to the image on your server>” alt=”something”/>’`) here ([help](https://expressjs.com/en/api.html#res.send))
+- Copy-paste the above html boilerplate into an index.html file [x]
+- Set up your Node/Express server like we’ve previously seen [x]
+- Create a POST route handler for /upload-profile-pic [x]
+- Try to set up Multer on your server following the documentation. You’ll have to set a destination storage, and the way you want the filenames to be handled ([help](https://medium.com/dataseries/configuring-express-multer-middleware-and-checking-file-information-497dc7af9eea), [help](https://www.npmjs.com/package/multer#diskstorage))[x]
+- Pass the middleware to your **POST** route handler; see if you can _console.log(req.file)_ inside of it [x]
+- If you can; you’re all set, you might want to implement some error handling logic here in case you don’t have a file [x]
+- And then some logic when you do have a file. Look at the info you get. Check if the file is saved correctly, with the right extension name (tip: _Multer removes the filename extension by default_, so you need to add it back) ([help](https://nodejs.org/api/path.html#path_path_extname_path)) [x]
+- You’ll need to use another application level middleware for Express to handle serving static files to the client ([help](https://expressjs.com/en/starter/static-files.html)) [x]
+- You want to send the picture back to the client for immediate display. You can res.send(`‘<h2>Here is the picture:</h2><img src=”<the path to the image on your server>” alt=”something”/>’`) here ([help](https://expressjs.com/en/api.html#res.send)) [x]
 
 ### 📌 Level 2:
 
