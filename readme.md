@@ -15,14 +15,43 @@ npm i express dotenv multer nodemon pg
 touch index.js readme.md
 ```
 
+Added in package.json:
+
+```
+{... "type": "module", ...},
+"scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+```
+
 Now run the project using
 
 ```
 npm run dev
 ```
 
+👇🏼👇🏼👇🏼
+
 ```
-The magic happens on port 8080
+The magic happens on port 8080 ✨
+```
+
+Added kill-port ☠️
+
+```
+npm i kill-port
+```
+
+Created nodemon.json
+
+```
+{
+    "events": {
+        "restart": "kill-port 8080",
+        "crash": "kill-port 8080"
+    }
+}
 ```
 
 ### 💡 Handle file upload in NodeJS
